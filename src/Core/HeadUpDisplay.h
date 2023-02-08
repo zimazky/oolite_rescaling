@@ -39,7 +39,10 @@ MA 02110-1301, USA.
 
 #define SCANNER_CENTRE_X	0
 #define SCANNER_CENTRE_Y	-180
+
 #define SCANNER_SCALE		256
+//#define SCANNER_SCALE		128 //Предотвращение появления леденцов за пределами сканера
+
 #define SCANNER_WIDTH		288
 #define SCANNER_HEIGHT		72
 
