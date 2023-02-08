@@ -142,7 +142,7 @@
 		max_energy = 85;
 		max_flight_pitch = 2;
 		max_flight_roll = 2.8;
-		max_flight_speed = 120;
+		max_flight_speed = 240;
 		max_missiles = 1;
 		missile_launch_position = "0.0 -5.1 19.2374";
 		missiles = 1;
@@ -151,7 +151,7 @@
 		name = "Adder";
 		roles = "trader(0.25) trader-courier(0.5) trader-smuggler pirate-light-fighter(0.25) pirate(0.2) scavenger shuttle hermit-ship";
 		scoop_position = "0.0 -5.1 22.724";
-		thrust = 15;
+		thrust = 30;
 		view_position_aft = "0.0 5.0 -22.5";
 		view_position_forward = "0.0 3.5 17.4";
 		view_position_port = "-12.0 1.5 -1.0";
@@ -196,7 +196,7 @@
 		max_energy = 1;
 		max_flight_pitch = 0.5;
 		max_flight_roll = 0.5;
-		max_flight_speed = 25;
+		max_flight_speed = 50;
 		missiles = 0;
 		model = "oolite_alloy.dat";
 		model_scale_factor = 0.33;
@@ -341,7 +341,7 @@
 		max_energy = 500;
 		max_flight_pitch = 0.4;
 		max_flight_roll = 0.75;
-		max_flight_speed = 70;
+		max_flight_speed = 140;
 		max_missiles = 7;
 		missile_launch_position = "0.0 -11.2 71.0";
 		missiles = 7;
@@ -350,7 +350,7 @@
 		name = "Anaconda";
 		roles = "trader(0.5) trader-courier(0.1)";
 		scoop_position = "0.0 -30.0 -60";
-		thrust = 7;
+		thrust = 14;
 		view_position_aft = "0.0 14.038046 -81.618951";
 		view_position_forward = "0.0 -1.8 79.344";
 		view_position_port = "-26.255348 11.415907 -32.565386";
@@ -488,7 +488,7 @@
 		max_energy = 350;
 		max_flight_pitch = 1;
 		max_flight_roll = 2;
-		max_flight_speed = 200;
+		max_flight_speed = 400;
 		max_missiles = 1;
 		missile_launch_position = "0.0 -5.9 17.5";
 		missiles = 1;
@@ -497,7 +497,7 @@
 		name = "Asp Mark II";
 		roles = "trader-courier hunter-medium(0.75) hunter-heavy(0.75) pirate-medium-fighter(0.5) pirate-heavy-fighter(0.5) pirate-interceptor pirate-aegis-raider escort-heavy assassin-heavy asp-pirate";
 		scoop_position = "0.0 -6.22 17.48";
-		thrust = 25;
+		thrust = 50;
 		view_position_aft = "0.0 4.7 -39.5811";
 		view_position_forward = "0.0 2.62065 50.1318";
 		view_position_port = "-27.73195 5.75933 2.57624";
@@ -763,7 +763,7 @@
 		max_energy = 1;
 		max_flight_pitch = 0.5;
 		max_flight_roll = 0.5;
-		max_flight_speed = 25;
+		max_flight_speed = 50;
 		missiles = 0;
 		model = "oolite_barrel.dat";
 		model_scale_factor = 0.33;
@@ -890,7 +890,7 @@
 		max_energy = 450;
 		max_flight_pitch = 1;
 		max_flight_roll = 2.8;
-		max_flight_speed = 120;
+		max_flight_speed = 240;
 		max_missiles = 4;
 		missile_launch_position = "0.0 2.322665 56.223506";
 		missiles = 4;
@@ -899,7 +899,7 @@
 		name = "Boa";
 		roles = "trader";
 		scoop_position = "0.0 3.029881 49.396415";
-		thrust = 18;
+		thrust = 36;
 		view_position_aft = "0.0 3.894413 -51.6227";
 		view_position_forward = "0.0 9.71333 54.7745";
 		view_position_port = "-16.75005 7.88388 15.119505";
@@ -1051,7 +1051,7 @@
 		max_energy = 525;
 		max_flight_pitch = 1;
 		max_flight_roll = 2.5;
-		max_flight_speed = 156;
+		max_flight_speed = 312;
 		max_missiles = 5;
 		missile_launch_position = "0.0 -4.888735 48.6764";
 		missiles = 5;
@@ -1060,7 +1060,7 @@
 		name = "Boa Class Cruiser";
 		roles = "trader(0.25) trader-courier(0.05)";
 		scoop_position = "0.0 -6.100643 44.2919";
-		thrust = 20;
+		thrust = 40;
 		view_position_aft = "0.0 8.343195 -55.9";
 		view_position_forward = "-0.075081 1.34004 49.3";
 		view_position_port = "-21.7753 5.22895 -5.45145";
@@ -1115,7 +1115,7 @@
 		max_energy = 25;
 		max_flight_pitch = 0.5;
 		max_flight_roll = 0.5;
-		max_flight_speed = 25;
+		max_flight_speed = 50;
 		missiles = 0;
 		model = "oolite_boulder.dat";
 		model_scale_factor = 0.5;
@@ -1213,7 +1213,7 @@
                 hue = 236;
             };
         });
-        thrust = 50;
+        thrust = 100;
         unpiloted = yes;
         smooth = yes;
         scan_class = "CLASS_BUOY";
@@ -1444,7 +1444,7 @@
 		max_energy = 256;
 		max_flight_pitch = 1;
 		max_flight_roll = 2;
-		max_flight_speed = 175;
+		max_flight_speed = 350;
 		max_missiles = 4;
 		missile_launch_position = "0.0 -15.5 -24.5";
 		missiles = 3;
@@ -1452,7 +1452,7 @@
 		model_scale_factor = 0.5;
 		name = "Cobra Mark III";
 		scoop_position = "0.0 -5.5 25.0";
-		thrust = 16;
+		thrust = 32;
 		view_position_aft = "0.0 6.0 -35.5";
 		view_position_forward = "0.0 7.25 31.0";
 		view_position_port = "-35.5 7.5 0.0";
@@ -1467,7 +1467,7 @@
 	{
 		like_ship = "oolite_template_cobra3";
 		is_template = 1;
-		max_flight_speed = 150;
+		max_flight_speed = 300;
 		thrust = 30;
 		roles = "trader(0.375) trader-courier(0.2) trader-smuggler(0.75) hunter-medium(0.5) pirate-heavy-fighter pirate-interceptor(0.25) pirate-aegis-raider(0.2) scavenger sunskim-trader";
 	};
@@ -1477,7 +1477,7 @@
 		has_ecm = 0.95;
 		is_template = 1;
 		max_cargo = 35;
-		max_flight_speed = 150;
+		max_flight_speed = 300;
 		materials =
 		{
 			"Hull" =
@@ -1536,7 +1536,7 @@
 			};			
 		};
 		max_cargo = 20;
-		max_flight_speed = 150;
+		max_flight_speed = 300;
 		missiles = 1;
 		roles = "pirate(0.25) pirate-medium-fighter(0.5)";
 	};
@@ -1647,7 +1647,7 @@
 		max_energy = 150;
 		max_flight_pitch = 1.2;
 		max_flight_roll = 2;
-		max_flight_speed = 130;
+		max_flight_speed = 260;
 		max_missiles = 1;
 		missile_launch_position = "0.0 -6.4 27.3215";
 		missiles = 1;
@@ -1656,7 +1656,7 @@
 		name = "Cobra Mark I";
 		roles = "pirate(0.5) pirate-medium-fighter hunter-medium scavenger trader trader-smuggler hermit-ship escort-medium(0.75) escort(0.25) assassin-light";
 		scoop_position = "0.0 -5.0 -9";
-		thrust = 12.5;
+		thrust = 25;
 		view_position_aft = "0.0 3.75 -27.5";
 		view_position_forward = "0.0 5.0 21.7";
 		view_position_port = "-16.0 6.5 0.0";
@@ -1770,7 +1770,7 @@
 		max_energy = 450;
 		max_flight_pitch = 1.75;
 		max_flight_roll = 2.5;
-		max_flight_speed = 300;
+		max_flight_speed = 600;
 		missile_launch_position = "0.0 -9.849197 28.224508";
 		missiles = 3;
 		model = "oolite_constrictor.dat";
@@ -1778,7 +1778,7 @@
 		name = "Constrictor";
 		pilot = "constrictor-mission-thief";	// key to entry in characters.plist
 		roles = "constrictor";
-		thrust = 25;
+		thrust = 50;
 		weapon_facings = 15;
 		weapon_position_forward = "0.0 -5.780295 26.8758";
 		weapon_position_aft = "0.0 2.243567 -25.8417";
@@ -2203,7 +2203,7 @@
 		max_energy = 25;
 		max_flight_pitch = 0.5;
 		max_flight_roll = 0.5;
-		max_flight_speed = 25;
+		max_flight_speed = 50;
 		missile_launch_position = "0.0 0.0 4.5";
 		missiles = 0;
 		model = "oolite_escape_capsule.dat";
@@ -2211,7 +2211,7 @@
 		name = "Escape capsule";
 		roles = "escape-capsule";
 		scan_class = "CLASS_CARGO";
-		thrust = 2.5;
+		thrust = 5;
 		weapon_position_aft = "0.0 0.0 -1.67";
 		weapon_position_forward = "0.0 0.0 4.18";
 		weapon_position_port = "-1.31 0.76 0.34";
@@ -2331,7 +2331,7 @@
 		max_energy = 150;
 		max_flight_pitch = 1;
 		max_flight_roll = 3.6;
-		max_flight_speed = 150;
+		max_flight_speed = 300;
 		max_missiles = 2;
 		missile_launch_position = "0.0 -12.3 40.05";
 		missiles = 2;
@@ -2340,7 +2340,7 @@
 		name = "Fer-de-Lance";
 		roles = "trader(0.25) trader-courier trader-smuggler(0.5) pirate-medium-fighter(0.75) pirate-heavy-fighter(0.75) pirate-interceptor pirate-aegis-raider(0.75) pirate(0.25) hunter-medium(0.75) hunter-heavy assassin-medium";
 		scoop_position = "0.0 -10.0322 21.6829";
-		thrust = 18;
+		thrust = 36;
 		view_position_aft = "0.0 12.0 -32.5";
 		view_position_forward = "0.0 0.0 47.0";
 		view_position_port = "-16.875 2.0 3.5";
@@ -2399,7 +2399,7 @@
 		max_energy = 250;
 		max_flight_pitch = 1.5;
 		max_flight_roll = 3;
-		max_flight_speed = 150;
+		max_flight_speed = 300;
 		missile_launch_position = "0.0 -8.08 19.14";
 		missiles = 1;
 		model = "oolite_gecko.dat";
@@ -2407,7 +2407,7 @@
 		name = "Gecko";
 		roles = "hunter(0.75) pirate-light-fighter(0.5) pirate-medium-fighter(0.75) pirate(0.5) escort(0.25) escort-medium(0.5) escort-heavy";
 		scoop_position = "0.0 -6.6 8.4";
-		thrust = 22.5;
+		thrust = 45;
 		weapon_facings = 1;
 		weapon_position_forward = "0.0 -2.49055 25.6416";
 		weapon_position_aft = "0.0 5.54957 -12.1558";
@@ -2628,7 +2628,7 @@
 		max_energy = 250;
 		max_flight_pitch = 1.5;
 		max_flight_roll = 2.75;
-		max_flight_speed = 150;
+		max_flight_speed = 300;
 		missile_launch_position = "0.0 -7.65 33.34";
 		missiles = 0;
 		model = "oolite_krait.dat";
@@ -2636,7 +2636,7 @@
 		name = "Krait";
 		roles = "pirate pirate-light-fighter(0.75) hunter(0.5) escort(0.25) assassin-light";
 		scoop_position = "0.0 -7.284 4.628";
-		thrust = 17.5;
+		thrust = 35;
 		weapon_facings = 1;
 		weapon_position_aft = "0.0 0.0 -34.6";
 		weapon_position_forward = "0.0 -1.6045 41.5081";
@@ -2706,7 +2706,7 @@
 		max_energy = 240;
 		max_flight_pitch = 1.4;
 		max_flight_roll = 2.1;
-		max_flight_speed = 160;
+		max_flight_speed = 320;
 		missile_launch_position = "0.0 -4.5 21.7";
 		missiles = 0;
 		model = "oolite_mamba.dat";
@@ -2714,7 +2714,7 @@
 		name = "Mamba";
 		roles = "pirate pirate-light-fighter(0.5) hunter";
 		scoop_position = "0.0 -2.0 -3";
-		thrust = 16;
+		thrust = 32;
 		weapon_facings = 1;
 		weapon_position_aft = "0.0 1.5184 -30.3193";
 		weapon_position_forward = "0.0 0.241963 33.558";
@@ -2775,7 +2775,7 @@
 		max_energy = 5;
 		max_flight_pitch = 8;
 		max_flight_roll = 10;
-		max_flight_speed = 375;
+		max_flight_speed = 750;
 		missiles = 0;
 		model = "oolite_missile.dat";
 		model_scale_factor = 0.33;
@@ -2790,7 +2790,7 @@
 			oolite_missile_proximity = 25;
 			oolite_missile_range = 30000;
 		};
-		thrust = 125;
+		thrust = 250;
 		unpiloted = yes;
 		weapon_energy = 4500;
 	};
@@ -2904,7 +2904,7 @@
 		max_energy = 240;
 		max_flight_pitch = 1.5;
 		max_flight_roll = 2.5;
-		max_flight_speed = 150;
+		max_flight_speed = 300;
 		max_missiles = 2;
 		missile_launch_position = "0.0 -7.75 0.5";
 		missiles = 2;
@@ -2913,7 +2913,7 @@
 		name = "Moray Star Boat";
 		roles = "trader(0.5) trader-courier(0.25) trader-smuggler hunter-medium pirate-medium-fighter pirate-interceptor(0.25) pirate(0.5) pirate-light-freighter(0.5) escort-medium(0.25) assassin-light";
 		scoop_position = "0.0 -15.212809 26.5399";
-		thrust = 16;
+		thrust = 32;
 		view_position_aft = "0.0 3.076074 -34.8507";
 		view_position_forward = "0.0 -6.77 33.468";
 		view_position_port = "-20.695265 -0.130955 -14.726075";
@@ -3123,7 +3123,7 @@
 		max_energy = 450;
 		max_flight_pitch = 0.8;
 		max_flight_roll = 2;
-		max_flight_speed = 100;
+		max_flight_speed = 200;
 		max_missiles = 2;
 		missile_launch_position = "0.0 -2.2 63.5";
 		missiles = 2;
@@ -3132,7 +3132,7 @@
 		name = "Python";
 		roles = "trader(0.5) trader-smuggler(0.2) pirate(0.2) pirate-light-freighter(0.2)";
 		scoop_position = "0.0 -15.0 -21.5";
-		thrust = 10;
+		thrust = 20;
 		view_position_aft = "0.0 9.150712 -64.8269";
 		view_position_forward = "0.0 1.18304 62. 0972";
 		view_position_port = "-35.80095 2.0 -27.05945";
@@ -3282,7 +3282,7 @@
 		max_energy = 10;
 		max_flight_pitch = 2;
 		max_flight_roll = 2;
-		max_flight_speed = 500;
+		max_flight_speed = 1000;
 		model = "qbomb.dat";
 		model_scale_factor = 0.33;
 		name = "Quirium Cascade Mine";
@@ -3582,14 +3582,14 @@
 		max_energy = 120;
 		max_flight_pitch = 0.9;
 		max_flight_roll = 2;
-		max_flight_speed = 40;
+		max_flight_speed = 80;
 		missile_launch_position = "0.0 -7.25 15.0";
 		missiles = 0;
 		model = "oolite_shuttle.dat";
 		model_scale_factor = 1.0;
 		name = "Orbital Shuttle";
 		roles = "shuttle";
-		thrust = 8;
+		thrust = 16;
 		weapon_facings = 0;
 		weapon_position_aft = "0.0 0.0 -17.5";
 		weapon_position_forward = "-0.0 -1.67 27.4";
@@ -3637,14 +3637,14 @@
 		max_energy = 240;
 		max_flight_pitch = 1.6;
 		max_flight_roll = 2.8;
-		max_flight_speed = 185;
+		max_flight_speed = 370;
 		missile_launch_position = "0.0 -8.0 13.17";
 		missiles = 0;
 		model = "oolite_sidewinder.dat";
 		model_scale_factor = 0.33;
 		name = "Sidewinder Scout Ship";
 		roles = "pirate(0.75) pirate-light-fighter(0.25) hunter";
-		thrust = 18.5;
+		thrust = 37;
 		weapon_facings = 1;
 		weapon_position_aft = "0.0 -6.5 -17.5";
 		weapon_position_forward = "0.0 -2.764625 25.2155";	
@@ -3700,7 +3700,7 @@
 		max_energy = 5;
 		max_flight_pitch = 1;
 		max_flight_roll = 1;
-		max_flight_speed = 10;
+		max_flight_speed = 20;
 		missiles = 0;
 		model = "oolite_splinter.dat";
 		model_scale_factor = 0.33;
@@ -3746,7 +3746,7 @@
 		max_energy = 150;
 		max_flight_pitch = 1;
 		max_flight_roll = 2;
-		max_flight_speed = 225;
+		max_flight_speed = 450;
 		missiles = 0;
 		model = "oolite_thargon.dat";
 		model_scale_factor = 0.33;
@@ -3754,7 +3754,7 @@
 		roles = "tharglet thargon EQ_THARGON";
 		scan_class = "CLASS_THARGOID";
 		scanner_range = 50000;
-		thrust = 20;
+		thrust = 40;
 		unpiloted = yes;
 		weapon_facings = 1;
 		weapon_position_aft = "0.0 0.0 -16.5";
@@ -3790,7 +3790,7 @@
 		max_energy = 600;
 		max_flight_pitch = 1;
 		max_flight_roll = 2;
-		max_flight_speed = 250;
+		max_flight_speed = 500;
 		missile_launch_position = "0.0 -58.0 -0.0";
 		missile_role = "EQ_THARGON";
 		missile_load_time = 1.5;
@@ -3802,7 +3802,7 @@
 		scan_class = "CLASS_THARGOID";
 		scanner_range = 60000;
 		script = "oolite-thargoid-warship.js";
-		thrust = 25;
+		thrust = 50;
 		weapon_facings = 3;
 	};
 	"oolite_template_transporter" = 
@@ -3835,7 +3835,7 @@
 		max_energy = 150;
 		max_flight_pitch = 1;
 		max_flight_roll = 2;
-		max_flight_speed = 50;
+		max_flight_speed = 100;
 		missile_launch_position = "0.0 -6.79 21.0";
 		missiles = 0;
 		model = "oolite_transporter.dat";
@@ -3843,7 +3843,7 @@
 		name = "Transporter";
 		roles = "shuttle";
 		scoop_position = "0.0 -6.0 -10.5";
-		thrust = 10;
+		thrust = 20;
 		weapon_facings = 1;
 		weapon_position_forward = "0.0 -3.57123 20.76385";
 		weapon_position_aft = "0.0 0.0 -17.5";
@@ -3920,7 +3920,7 @@
 		max_energy = 180;
 		max_flight_pitch = 1.8;
 		max_flight_roll = 2.8;
-		max_flight_speed = 160;
+		max_flight_speed = 320;
 		missile_launch_position = "0.0 -8.5 -11.0";
 		missiles = 1;
 		model = "oolite_viper.dat";
@@ -4003,7 +4003,7 @@
 				position = (12.50, 0.0, 0.0);
 			}
 		);
-		thrust = 16;
+		thrust = 32;
 		weapon_facings = 1;
 		weapon_position_aft = "0.0 0.0 -27.5";
 		weapon_position_forward = "0.0 -0.15 35.0344";	
@@ -4060,7 +4060,7 @@
 		max_energy = 280;
 		max_flight_pitch = 2;
 		max_flight_roll = 4.2;
-		max_flight_speed = 260;
+		max_flight_speed = 520;
 		missile_launch_position = "0.0 -10.5 -9.0";
 		missiles = 3;
 		model = "oolite_viper_interceptor.dat";
@@ -4142,7 +4142,7 @@
 				position = (12.50, 0.0, 0.0);
 			}
 		);
-		thrust = 25;
+		thrust = 50;
 		weapon_facings = 1;
 		weapon_position_aft = "0.0 -8.0 -32.0";
 		weapon_position_forward = "0.0 -0.15 35.034";	
@@ -4154,7 +4154,7 @@
 	{
 		like_ship = "oolite_template_viper";
 		is_template = 1;
-		max_flight_speed = 180;
+		max_flight_speed = 360;
 		materials = 
 		{ 
 			"Hull" = 
@@ -4183,7 +4183,7 @@
 			};
 		};
 		roles = "wingman";
-		thrust = 18;
+		thrust = 36;
 	};
 	"oolite_template_worm" = 
 	{
@@ -4221,14 +4221,14 @@
 		max_energy = 75;
 		max_flight_pitch = 1;
 		max_flight_roll = 2;
-		max_flight_speed = 55;
+		max_flight_speed = 110;
 		missile_launch_position = "0.0 -11.01 14.76";
 		missiles = 0;
 		model = "oolite_worm.dat";
 		model_scale_factor = 0.33;
 		name = "Worm";
 		roles = "shuttle";
-		thrust = 6;
+		thrust = 12;
 		weapon_facings = 1;
 		weapon_position_aft = "0.0 -4.8 -17.5";
 		weapon_position_forward = "0.0 -5.34047 19.2792";
@@ -4245,7 +4245,7 @@
 		has_scoop = yes;
 		max_cargo = 5;
 		max_energy = 55;
-		max_flight_speed = 50;
+		max_flight_speed = 100;
 		materials = 
 		{ 
 			"Hull" = 
@@ -4276,7 +4276,7 @@
 		max_energy = 20000;
 		max_flight_pitch = 0.2;
 		max_flight_roll = 0.2;
-		max_flight_speed = 250;
+		max_flight_speed = 500;
 		model = "wreck1.dat";
 		model_scale_factor = 0.33;
 		name = "Wreckage";

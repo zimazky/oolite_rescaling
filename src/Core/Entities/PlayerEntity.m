@@ -3327,10 +3327,10 @@ NSComparisonResult marketSorterByMassUnit(id a, id b, void *market);
 			//double factor = ([stellar isSun]) ? 2.0 : 4.0;
 			
 			// Расстояние масс-блокировки в радиусах звезд/планет
-			double factor = ([stellar isSun]) ? 1.4 : 1.0; 
+			double factor = ([stellar isSun]) ? 1.2 : 1.0; //(1.0+STATION_ALTITUDE/rad); 
 			// plus ensure mass lock when 25 km or less from the surface of small stellar bodies
 			// dist is a square distance so it needs to be compared to (rad+25000) * (rad+25000)!
-			if (dist < rad*rad*factor || dist < rad*rad + 50000*rad + 625000000 ) 
+			if (dist < rad*rad*factor*factor || dist < rad*rad + 50000*rad + 625000000 ) 
 			{
 				massLocked = YES;
 			}

@@ -126,7 +126,7 @@ static const double kMesosphere = 10.0 * ATMOSPHERE_DEPTH;	// atmosphere effect 
 	// Размеры планет и звезд в игре не соответствуют номинальным размерам, размеры пересчитываются с некоторым коэффициентом
 	// В оригинальной игре 1 км = 10 м
 	// Предложение от Redspear было увеличить до соотношения 1 км = 33 м
-	collision_radius = radius_km * 33.0;	
+	collision_radius = radius_km * PLANET_SCALE_FACTOR;	
 
 	OOTechLevelID techLevel = [dict oo_intForKey:KEY_TECHLEVEL defaultValue:[planetInfo oo_intForKey:KEY_TECHLEVEL]];
 	
