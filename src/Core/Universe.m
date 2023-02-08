@@ -116,7 +116,10 @@ enum
 #define MAX_NUMBER_OF_ENTITIES				200
 #define STANDARD_STATION_ROLL				0.4
 // currently twice scanner radius
-#define LANE_WIDTH			51200.0
+//#define LANE_WIDTH			51200.0
+
+// Ширина полосы движения для создания неигровых кораблей
+#define LANE_WIDTH			(4.0 * SCANNER_MAX_RANGE)
 
 static NSString * const kOOLogUniversePopulateError			= @"universe.populate.error";
 static NSString * const kOOLogUniversePopulateWitchspace	= @"universe.populate.witchspace";
@@ -1316,7 +1319,10 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 	OOPlanetEntity *a_planet = [[OOPlanetEntity alloc] initFromDictionary:planetDict withAtmosphere:[planetDict oo_boolForKey:@"has_atmosphere" defaultValue:YES] andSeed:systemSeed forSystem:systemID];
 	
 	double planet_zpos = [planetDict oo_floatForKey:@"planet_distance" defaultValue:500000];
-	planet_zpos *= [planetDict oo_floatForKey:@"planet_distance_multiplier" defaultValue:1.0];
+	//planet_zpos *= [planetDict oo_floatForKey:@"planet_distance_multiplier" defaultValue:1.0];
+
+	// Увеличение мультипликатора расстояния до планеты при входе в систему через WP
+	planet_zpos *= [planetDict oo_floatForKey:@"planet_distance_multiplier" defaultValue:5.0];
 	
 #ifdef OO_DUMP_PLANETINFO
 	OOLog(@"planetinfo.record",@"planet zpos = %f",planet_zpos);
@@ -1575,7 +1581,10 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 #ifdef OO_DUMP_PLANETINFO
 	OOLog(@"planetinfo.record",@"station_vector = %.3f %.3f %.3f",vf.x,vf.y,vf.z);
 #endif
-	stationPos = HPvector_subtract(stationPos, vectorToHPVector(vector_multiply_scalar(vf, 2.0 * planet_radius)));
+	//stationPos = HPvector_subtract(stationPos, vectorToHPVector(vector_multiply_scalar(vf, 2.0 * planet_radius)));
+
+	// Позиция станции 1.5 радиуса планеты
+	stationPos = HPvector_subtract(stationPos, vectorToHPVector(vector_multiply_scalar(vf, 1.5 * planet_radius)));
 	
 
 	//// possibly systeminfo has an override for the station
@@ -1884,7 +1893,10 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 		}
 		else if ([code isEqualToString:@"LANE_WP"])
 		{
-			result = OORandomPositionInCylinder(kZeroHPVector,SCANNER_MAX_RANGE,[planet position],[planet radius]*3,LANE_WIDTH);
+			//result = OORandomPositionInCylinder(kZeroHPVector,SCANNER_MAX_RANGE,[planet position],[planet radius]*3,LANE_WIDTH);
+
+			// Уменьшаем расстояние от планеты где не генерируются неигровые корабли в направлении W-Planet
+			result = OORandomPositionInCylinder(kZeroHPVector,SCANNER_MAX_RANGE,[planet position],[planet radius]*1.1,LANE_WIDTH);
 		}
 		else if ([code isEqualToString:@"LANE_WS"])
 		{
@@ -1892,7 +1904,10 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 		}
 		else if ([code isEqualToString:@"LANE_PS"])
 		{
-			result = OORandomPositionInCylinder([planet position],[planet radius]*3,[sun position],[sun radius]*3,LANE_WIDTH);
+			//result = OORandomPositionInCylinder([planet position],[planet radius]*3,[sun position],[sun radius]*3,LANE_WIDTH);
+
+			// Уменьшаем расстояние от планеты где не генерируются неигровые корабли в направлении Planet-Sun
+			result = OORandomPositionInCylinder([planet position],[planet radius]*1.1,[sun position],[sun radius]*3,LANE_WIDTH);
 		}
 		else if ([code isEqualToString:@"STATION_AEGIS"])
 		{

@@ -15,6 +15,7 @@
 		sky_color_1 = (0.75,0.8,1);
 		sky_color_2 = (1.0,0.85,0.6);
 		stations_require_docking_clearance = no;
+		sun_distance_multiplier = 6.6; // Дистанция до солнца
 	};
 
 	"0 0" = {
