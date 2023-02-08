@@ -50,7 +50,8 @@ typedef enum
 
 
 #define ATMOSPHERE_DEPTH		500.0
-#define PLANET_MINIATURE_FACTOR	0.00185
+//#define PLANET_MINIATURE_FACTOR	0.00185
+#define PLANET_MINIATURE_FACTOR	0.0005 // Масштаб размера миниатюры планеты на экране F7
 #define MAX_SUBDIVIDE			6
 
 

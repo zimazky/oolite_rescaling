@@ -3035,7 +3035,14 @@ NSComparisonResult marketSorterByMassUnit(id a, id b, void *market);
 			if (travelling_at_hyperspeed)
 			{
 				// decrease speed to maximum normal speed
-				float deceleration = (speed_delta * delta_t * HYPERSPEED_FACTOR);
+				//float deceleration = (speed_delta * delta_t * HYPERSPEED_FACTOR);
+
+				// Скорость торможения при отключении тора
+				// Должна быть вычисляемой величиной от коэффициента масштабирования (наверно квадратная зависимость)
+				// При торможении корабль должен пройти то-же расстояние, что и в оригинальной игре для исключения
+				// По предложению Redspear умножается на 8
+				float deceleration = (speed_delta * delta_t * HYPERSPEED_FACTOR * 8); 
+
 				if (alertFlags & ALERT_FLAG_MASS_LOCK)
 				{
 					// decelerate much quicker in masslocks
@@ -3317,7 +3324,10 @@ NSComparisonResult marketSorterByMassUnit(id a, id b, void *market);
 		{
 			double dist = stellar->zero_distance;
 			double rad = stellar->collision_radius;
-			double factor = ([stellar isSun]) ? 2.0 : 4.0;
+			//double factor = ([stellar isSun]) ? 2.0 : 4.0;
+			
+			// Расстояние масс-блокировки в радиусах звезд/планет
+			double factor = ([stellar isSun]) ? 1.4 : 1.0; 
 			// plus ensure mass lock when 25 km or less from the surface of small stellar bodies
 			// dist is a square distance so it needs to be compared to (rad+25000) * (rad+25000)!
 			if (dist < rad*rad*factor || dist < rad*rad + 50000*rad + 625000000 ) 

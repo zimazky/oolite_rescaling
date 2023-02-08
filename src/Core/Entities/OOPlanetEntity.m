@@ -121,7 +121,13 @@ static const double kMesosphere = 10.0 * ATMOSPHERE_DEPTH;	// atmosphere effect 
 	[self setName:OOExpand([dict oo_stringForKey:KEY_PLANETNAME defaultValue:[planetInfo oo_stringForKey:KEY_PLANETNAME defaultValue:@"%H"]])];
 	
 	int radius_km = [dict oo_intForKey:KEY_RADIUS defaultValue:[planetInfo oo_intForKey:KEY_RADIUS]];
-	collision_radius = radius_km * 10.0;	// Scale down by a factor of 100
+	//collision_radius = radius_km * 10.0;	// Scale down by a factor of 100
+
+	// Размеры планет и звезд в игре не соответствуют номинальным размерам, размеры пересчитываются с некоторым коэффициентом
+	// В оригинальной игре 1 км = 10 м
+	// Предложение от Redspear было увеличить до соотношения 1 км = 33 м
+	collision_radius = radius_km * 33.0;	
+
 	OOTechLevelID techLevel = [dict oo_intForKey:KEY_TECHLEVEL defaultValue:[planetInfo oo_intForKey:KEY_TECHLEVEL]];
 	
 	if (techLevel > 14)  techLevel = 14;

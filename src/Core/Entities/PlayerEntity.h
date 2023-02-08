@@ -310,10 +310,13 @@ typedef enum
 
 #if OO_VARIABLE_TORUS_SPEED
 #define HYPERSPEED_FACTOR				[PLAYER hyperspeedFactor]
-#define MIN_HYPERSPEED_FACTOR			32.0
-#define MAX_HYPERSPEED_FACTOR			1024.0
+//#define MIN_HYPERSPEED_FACTOR			32.0
+#define MIN_HYPERSPEED_FACTOR			128.0   // Минимальный множитель привода тора
+//#define MAX_HYPERSPEED_FACTOR			1024.0
+#define MAX_HYPERSPEED_FACTOR			80192.0 // Максимальный множитель привода тора
 #else
-#define HYPERSPEED_FACTOR				32.0
+//#define HYPERSPEED_FACTOR				32.0
+#define HYPERSPEED_FACTOR				128.0			// Множитель привода тора
 #endif
 
 #define PLAYER_SHIP_DESC				@"cobra3-player"
