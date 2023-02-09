@@ -115,12 +115,11 @@ enum
 
 #define MAX_NUMBER_OF_ENTITIES				200
 #define STANDARD_STATION_ROLL				0.4
-#define PLANET_DISTANCE_FACTOR			2.8*sqrt(PLANET_SCALE_FACTOR/10.0)
+// Множитель дистанции от планеты до WP
+#define PLANET_DISTANCE_FACTOR			2.8 * sqrt(PLANET_SCALE_FACTOR/10.0)
 // currently twice scanner radius
-#define LANE_WIDTH			4.0 * SCANNER_MAX_RANGE
-
 // Ширина полосы движения для создания неигровых кораблей
-//#define LANE_WIDTH			(4.0 * SCANNER_MAX_RANGE)
+#define LANE_WIDTH			4.0 * SCANNER_MAX_RANGE
 
 static NSString * const kOOLogUniversePopulateError			= @"universe.populate.error";
 static NSString * const kOOLogUniversePopulateWitchspace	= @"universe.populate.witchspace";
