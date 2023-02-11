@@ -50,7 +50,7 @@ typedef enum
 
 // Высота атмосферы
 //#define ATMOSPHERE_DEPTH		500.0
-#define ATMOSPHERE_DEPTH		160.0*sqrt(PLANET_SCALE_FACTOR)
+#define ATMOSPHERE_DEPTH		50.0 * PLANET_SCALE_FACTOR
 // Масштаб размера миниатюры планеты на экране F7
 #define PLANET_MINIATURE_FACTOR	0.0185/PLANET_SCALE_FACTOR
 #define MAX_SUBDIVIDE			6
