@@ -56,7 +56,9 @@ extern size_t gTotalEntityMemory;
 #define PLANET_SCALE_FACTOR   100
 // Высота станции над планетой в метрах
 // В оригинальной игре приравнивалась радиусу планеты (в игровых метрах примерно 40000...60000 м)
-#define STATION_ALTITUDE      150000.0
+#define STATION_ALTITUDE      60000.0
+// Минимальная высота генерации неигровых кораблей над планетой
+#define MIN_SHIP_ALTITUDE     0.6 * STATION_ALTITUDE
 
 #define SCANNER_MAX_RANGE			25600.0
 #define SCANNER_MAX_RANGE2			SCANNER_MAX_RANGE*SCANNER_MAX_RANGE

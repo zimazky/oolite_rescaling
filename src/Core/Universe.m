@@ -1891,7 +1891,7 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 		else if ([code isEqualToString:@"LANE_WP"])
 		{
 			// Уменьшаем расстояние от планеты где не генерируются неигровые корабли в направлении W-Planet
-			result = OORandomPositionInCylinder(kZeroHPVector,SCANNER_MAX_RANGE,[planet position],[planet radius]+STATION_ALTITUDE,LANE_WIDTH);
+			result = OORandomPositionInCylinder(kZeroHPVector,SCANNER_MAX_RANGE,[planet position],[planet radius]+MIN_SHIP_ALTITUDE,LANE_WIDTH);
 		}
 		else if ([code isEqualToString:@"LANE_WS"])
 		{
@@ -1900,27 +1900,28 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 		else if ([code isEqualToString:@"LANE_PS"])
 		{
 			// Уменьшаем расстояние от планеты где не генерируются неигровые корабли в направлении Planet-Sun
-			result = OORandomPositionInCylinder([planet position],[planet radius]+STATION_ALTITUDE,[sun position],[sun radius]*3,LANE_WIDTH);
+			result = OORandomPositionInCylinder([planet position],[planet radius]+MIN_SHIP_ALTITUDE,[sun position],[sun radius]*3,LANE_WIDTH);
 		}
 		else if ([code isEqualToString:@"STATION_AEGIS"])
 		{
 			do 
 			{
 				result = OORandomPositionInShell([[self station] position],[[self station] collisionRadius]*1.2,SCANNER_MAX_RANGE*2.0);
-			} while(HPdistance2(result,[planet position])<[planet radius]*[planet radius]*1.5);
+			} while(HPdistance2(result,[planet position])<([planet radius]+MIN_SHIP_ALTITUDE)*([planet radius]+MIN_SHIP_ALTITUDE));
+			// Исключаем генерацию ниже минимальной высоты
 			// loop to make sure not generated too close to the planet's surface
 		}
 		else if ([code isEqualToString:@"PLANET_ORBIT_LOW"])
 		{
-			result = OORandomPositionInShell([planet position],[planet radius]*1.1,[planet radius]*2.0);
+			result = OORandomPositionInShell([planet position],[planet radius]+MIN_SHIP_ALTITUDE,[planet radius]+STATION_ALTITUDE);
 		}
 		else if ([code isEqualToString:@"PLANET_ORBIT"])
 		{
-			result = OORandomPositionInShell([planet position],[planet radius]*2.0,[planet radius]*4.0);
+			result = OORandomPositionInShell([planet position],[planet radius]+STATION_ALTITUDE,[planet radius]+2.0*STATION_ALTITUDE);
 		}
 		else if ([code isEqualToString:@"PLANET_ORBIT_HIGH"])
 		{
-			result = OORandomPositionInShell([planet position],[planet radius]*4.0,[planet radius]*8.0);
+			result = OORandomPositionInShell([planet position],[planet radius]+2.0*STATION_ALTITUDE,[planet radius]+4.0*STATION_ALTITUDE);
 		}
 		else if ([code isEqualToString:@"STAR_ORBIT_LOW"])
 		{
