@@ -441,7 +441,7 @@ static const BaseFace kTexturedFaces[][3] =
 
 	last_launch_time = [UNIVERSE getTime] + 30.0 - shuttle_launch_interval;   // debug - launch 30s after player enters universe
 
-	collision_radius = radius_km * 10.0; // scale down by a factor of 100 !
+	collision_radius = radius_km * PLANET_SCALE_FACTOR;
 	
 	scanClass = CLASS_NO_DRAW;
 	

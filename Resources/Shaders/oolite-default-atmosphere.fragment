@@ -71,9 +71,6 @@ void main()
 	float minDistance = atmRadius + 3500.0;
 	float magicDistance = atmDistance - minDistance;
 	
-	
-	//float cosThreshold = -1.333333e-6 * atmRadius + 0.21333333; // 0.17 ... 0.13
-	//float cosThreshold = -1.333333e-6 * atmRadius / 10.0 + 0.17333333;
 	float newOpacityExponent = atmRadius > 40000.0 ? 3.0 : 5.0;
 	
 	// mix in some light blue color

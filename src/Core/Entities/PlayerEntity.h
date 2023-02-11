@@ -312,14 +312,11 @@ typedef enum
 #define HYPERSPEED_FACTOR				[PLAYER hyperspeedFactor]
 
 // Минимальный множитель привода тора при изменяемой скорости тора
-//#define MIN_HYPERSPEED_FACTOR		32
 #define MIN_HYPERSPEED_FACTOR			128.0 //3.2*PLANET_SCALE_FACTOR
 // Максимальный множитель привода тора при изменяемой скорости тора
-//#define MAX_HYPERSPEED_FACTOR			1024.0
 #define MAX_HYPERSPEED_FACTOR			4096.0 //2048*PLANET_SCALE_FACTOR 
 #else
-// Множитель привода тора
-//#define HYPERSPEED_FACTOR				32.0
+// Множитель привода тора при постоянной скорости тора
 #define HYPERSPEED_FACTOR				  128.0 //3.2*PLANET_SCALE_FACTOR
 #endif
 

@@ -1319,8 +1319,6 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 	OOPlanetEntity *a_planet = [[OOPlanetEntity alloc] initFromDictionary:planetDict withAtmosphere:[planetDict oo_boolForKey:@"has_atmosphere" defaultValue:YES] andSeed:systemSeed forSystem:systemID];
 	
 	double planet_zpos = [planetDict oo_floatForKey:@"planet_distance" defaultValue:500000];
-	//planet_zpos *= [planetDict oo_floatForKey:@"planet_distance_multiplier" defaultValue:1.0];
-
 	// Увеличение мультипликатора расстояния до планеты при входе в систему через WP
 	planet_zpos *= [planetDict oo_floatForKey:@"planet_distance_multiplier" defaultValue:PLANET_DISTANCE_FACTOR];
 	
@@ -1581,9 +1579,8 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 #ifdef OO_DUMP_PLANETINFO
 	OOLog(@"planetinfo.record",@"station_vector = %.3f %.3f %.3f",vf.x,vf.y,vf.z);
 #endif
-	//stationPos = HPvector_subtract(stationPos, vectorToHPVector(vector_multiply_scalar(vf, 2.0 * planet_radius)));
 
-	// Позиция станции 1.5 радиуса планеты
+	// Позиция станции
 	stationPos = HPvector_subtract(stationPos, vectorToHPVector(vector_multiply_scalar(vf, planet_radius + STATION_ALTITUDE)));
 	
 
@@ -1893,8 +1890,6 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 		}
 		else if ([code isEqualToString:@"LANE_WP"])
 		{
-			//result = OORandomPositionInCylinder(kZeroHPVector,SCANNER_MAX_RANGE,[planet position],[planet radius]*3,LANE_WIDTH);
-
 			// Уменьшаем расстояние от планеты где не генерируются неигровые корабли в направлении W-Planet
 			result = OORandomPositionInCylinder(kZeroHPVector,SCANNER_MAX_RANGE,[planet position],[planet radius]+STATION_ALTITUDE,LANE_WIDTH);
 		}
@@ -1904,8 +1899,6 @@ static GLfloat	docked_light_specular[4]	= { DOCKED_ILLUM_LEVEL, DOCKED_ILLUM_LEV
 		}
 		else if ([code isEqualToString:@"LANE_PS"])
 		{
-			//result = OORandomPositionInCylinder([planet position],[planet radius]*3,[sun position],[sun radius]*3,LANE_WIDTH);
-
 			// Уменьшаем расстояние от планеты где не генерируются неигровые корабли в направлении Planet-Sun
 			result = OORandomPositionInCylinder([planet position],[planet radius]+STATION_ALTITUDE,[sun position],[sun radius]*3,LANE_WIDTH);
 		}

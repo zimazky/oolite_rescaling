@@ -44,7 +44,6 @@ extern size_t gTotalEntityMemory;
 
 
 #define NO_DRAW_DISTANCE_FACTOR		1024.0
-//#define ABSOLUTE_NO_DRAW_DISTANCE2	(2500.0 * 2500.0 * NO_DRAW_DISTANCE_FACTOR * NO_DRAW_DISTANCE_FACTOR)
 // ie. the furthest away thing we can draw is at 1280km (a 2.5km wide object would disappear at that range)
 
 // Увеличиваем для видимости крупных объектов
@@ -53,15 +52,13 @@ extern size_t gTotalEntityMemory;
 // Множитель размера планет (сколько метров игрового пространства в 1 км радиуса планеты)
 // В оригинальной игре равен 10 м/км, 
 // т.е размер планеты в игровом пространстве в 100 раз меньше номинального размера
+// При PLANET_SCALE_FACTOR=100 размер планеты в игровом пространстве в 10 раз меньше номинального размера
 #define PLANET_SCALE_FACTOR   100
 // Высота станции над планетой в метрах
 // В оригинальной игре приравнивалась радиусу планеты (в игровых метрах примерно 40000...60000 м)
-#define STATION_ALTITUDE      60000
+#define STATION_ALTITUDE      150000.0
 
 #define SCANNER_MAX_RANGE			25600.0
-// Уменьшаем радиус сканера
-//#define SCANNER_MAX_RANGE				12800.0
-
 #define SCANNER_MAX_RANGE2			SCANNER_MAX_RANGE*SCANNER_MAX_RANGE
 
 #define CLOSE_COLLISION_CHECK_MAX_RANGE2 1000000000.0

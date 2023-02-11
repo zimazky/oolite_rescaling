@@ -745,11 +745,9 @@ static ShipEntity *doOctreesCollide(ShipEntity *prime, ShipEntity *other);
 	[self setTrackCloseContacts:[shipDict oo_boolForKey:@"track_contacts" defaultValue:NO]];
 	
 	// ship skin insulation factor (1.0 is normal)
-	//[self setHeatInsulation:[shipDict oo_floatForKey:@"heat_insulation" defaultValue:[self hasHeatShield] ? 2.0 : 1.0]];
-
 	// Параметр тепловой защиты для неигровых кораблей, для их скольжения по солнцу
-	[self setHeatInsulation:[shipDict oo_floatForKey:@"heat_insulation" defaultValue:[self hasHeatShield] ? 6.6 : 3.3]];
-	
+	[self setHeatInsulation:[shipDict oo_floatForKey:@"heat_insulation" defaultValue:[self hasHeatShield] ? 2.0 : 1.0]];
+
 	// unpiloted (like missiles asteroids etc.)
 	_explicitlyUnpiloted = [shipDict oo_fuzzyBooleanForKey:@"unpiloted"];
 	if (_explicitlyUnpiloted)

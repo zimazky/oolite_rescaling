@@ -563,7 +563,7 @@
 		max_flight_speed = 0;
 		missiles = 0;
 		model = "oolite_asteroid.dat";
-		name = "Medium Asteroid";
+		name = "Asteroid";
 		roles = "asteroid";
 		scan_class = "CLASS_ROCK";
 		smooth = yes;
@@ -586,152 +586,6 @@
 		};
 		model = "oolite_alt_asteroid.dat";
 	};
-	"oolite_template_asteroid_small" = 
-	{
-		like_ship = "oolite_template_asteroid";
-		bounty = 5;
-		is_template = 1;
-		likely_cargo = 2;
-		materials =
-		{
-			"oolite_alt_asteroid_diffuse.png" =
-			{
-				shininess = 7;
-				specular_color = (0.3, 0.3, 0.3, 1.0);
-			};
-		};
-		model = "oolite_asteroid.dat";
-		model_scale_factor = 0.33;
-		name = "Small Asteroid";
-		roles = "asteroid";
-	};
-	"oolite_template_asteroid_small_alt" = 
-	{
-		like_ship = "oolite_template_asteroid";
-		bounty = 5;
-		is_template = 1;
-		likely_cargo = 2;
-		materials =
-		{
-			"oolite_alt_asteroid_diffuse.png" =
-			{
-				shininess = 7;
-				specular_color = (0.3, 0.3, 0.3, 1.0);
-			};
-		};
-		model = "oolite_alt_asteroid.dat";
-		model_scale_factor = 0.33;
-		name = "Small Asteroid";
-		roles = "asteroid";
-	};
-	"oolite_template_asteroid_large" = 
-	{
-		like_ship = "oolite_template_asteroid";
-		bounty = 30;
-		is_template = 1;
-		likely_cargo = 12;
-		materials =
-		{
-			"oolite_alt_asteroid_diffuse.png" =
-			{
-				shininess = 7;
-				specular_color = (0.3, 0.3, 0.3, 1.0);
-			};
-		};
-		max_energy = 100;
-		energy_recharge_rate = 500;
-		model = "oolite_asteroid.dat";
-		model_scale_factor = 3.3;
-		name = "Large Asteroid";
-		roles = "asteroid(0.25)";
-	};
-	"oolite_template_asteroid_large_alt" = 
-	{
-		like_ship = "oolite_template_asteroid";
-		bounty = 30;
-		is_template = 1;
-		likely_cargo = 12;
-		materials =
-		{
-			"oolite_alt_asteroid_diffuse.png" =
-			{
-				shininess = 7;
-				specular_color = (0.3, 0.3, 0.3, 1.0);
-			};
-		};
-		max_energy = 100;
-		energy_recharge_rate = 500;
-		model = "oolite_alt_asteroid.dat";
-		model_scale_factor = 3.3;
-		name = "Large Asteroid";
-		roles = "asteroid(0.25)";
-	};
-	"oolite_template_asteroid_huge" = 
-	{
-		like_ship = "oolite_template_asteroid";
-		bounty = 100;
-		is_template = 1;
-		materials =
-		{
-			"oolite_alt_asteroid_diffuse.png" =
-			{
-				shininess = 7;
-				specular_color = (0.3, 0.3, 0.3, 1.0);
-			};
-		};
-		max_energy = 25000;
-		energy_recharge_rate = 500;
-		model = "oolite_asteroid.dat";
-		model_scale_factor = 6.6;
-		name = "Huge Asteroid";
-		roles = "asteroid(0.05)";
-	};
-	"oolite_template_asteroid_huge_alt" = 
-	{
-		like_ship = "oolite_template_asteroid";
-		bounty = 100;
-		is_template = 1;
-		materials =
-		{
-			"oolite_alt_asteroid_diffuse.png" =
-			{
-				shininess = 7;
-				specular_color = (0.3, 0.3, 0.3, 1.0);
-			};
-		};
-		max_energy = 25000;
-		energy_recharge_rate = 500;
-		model = "oolite_alt_asteroid.dat";
-		model_scale_factor = 6.6;
-		name = "Huge Asteroid";
-		roles = "asteroid(0.05)";
-	};
-	
-	"asteroid-small" = 
-	{
-		like_ship = "oolite_template_asteroid_small";
-	};
-	"asteroid-alternative-small" =
-	{
-		like_ship = "oolite_template_asteroid_small_alt";
-	};
-	"asteroid-large" = 
-	{
-		like_ship = "oolite_template_asteroid_large";
-	};
-	"asteroid-alternative-large" =
-	{
-		like_ship = "oolite_template_asteroid_large_alt";
-	};
-	"asteroid-huge" = 
-	{
-		like_ship = "oolite_template_asteroid_huge";
-	};
-	"asteroid-alternative-huge" =
-	{
-		like_ship = "oolite_template_asteroid_huge_alt";
-	};
-	
 	"oolite_template_tutorial-asteroid" =
 	{
 		like_ship = "oolite_template_asteroid";
@@ -1158,7 +1012,7 @@
         max_flight_speed = 0;
         missiles = 0;
         model = "oolite_buoy.dat";
-				model_scale_factor = 0.5;
+        model_scale_factor = 0.5;
         name = "Navigation Buoy";
         roles = "buoy";
         materials = {
@@ -1962,7 +1816,7 @@
 				size = 10;
 			}
 		);
-		thrust = 50;
+		thrust = 100;
 		weapon_energy = 0;
 	};
 	"oolite_template_dodecahedron-station" =
@@ -2135,7 +1989,7 @@
 				size = 10;
 			}
 		);
-		thrust = 50;
+		thrust = 100;
 		weapon_energy = 0;
 	};
 	// ecm hardened missile (missile template is later on)
@@ -2584,7 +2438,7 @@
 				size = 10;
 			}
 		);
-		thrust = 50;
+		thrust = 100;
 		weapon_energy = 0;
 	};
 	"oolite_template_krait" = 
