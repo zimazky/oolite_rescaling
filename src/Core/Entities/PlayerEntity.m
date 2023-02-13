@@ -3324,7 +3324,7 @@ NSComparisonResult marketSorterByMassUnit(id a, id b, void *market);
 			double rad = stellar->collision_radius;
 			// Расстояние масс-блокировки
 			// Для планеты блокировка включается на высоте станции
-			double planet_factor = ([stellar isSun]) ? rad*1.2 : rad + MIN_SHIP_ALTITUDE; 
+			double planet_factor = ([stellar isSun]) ? rad*1.2 : rad + STATION_ALTITUDE; 
 			// plus ensure mass lock when 25 km or less from the surface of small stellar bodies
 			// dist is a square distance so it needs to be compared to (rad+25000) * (rad+25000)!
 			double scanner_factor = rad + SCANNER_MAX_RANGE;
