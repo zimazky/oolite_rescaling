@@ -24,10 +24,6 @@
 	SOFTWARE.
 */
 
-// Масштабный коэффициент размера планеты
-// отношение радиуса планеты в метрах игрового пространства к номинальному радиусу планеты в километрах
-#define PLANET_SCALE_FACTOR 		100
-
 #define MULTIPLIER_LIGHTSRCRADIANCE	1.035
 #define MULTIPLIER_PREEXPOSURE		1.0
 
@@ -39,6 +35,8 @@ uniform float			atmRadius;
 uniform vec4			atmColor;
 uniform float			atmColorMixRatio;
 uniform float			atmDensity;
+// Высота атмосферы
+uniform float			atmDepth;
 
 // No vNormal, because normal is always 0,0,1 in tangent space.
 varying vec3			vEyeVector;
@@ -52,10 +50,8 @@ void main()
 	vec3 totalColor = vec3(0.0);
 	vec3 normal = vec3(0.0, 0.0, 1.0);
 
-	// Высота атмосферы
-	float AtmDepth = 50.0 * PLANET_SCALE_FACTOR;
 	// Отношение радиуса планеты к радиусу атмосферы
-	float RdivRa = (atmRadius-AtmDepth)/atmRadius;
+	float RdivRa = (atmRadius-atmDepth)/atmRadius;
 	// Косинус угла, разделяющего лучи пересекающие планету и лучи проходящие мимо
 	float cosThreshold = sqrt(1.0-RdivRa*RdivRa);
 

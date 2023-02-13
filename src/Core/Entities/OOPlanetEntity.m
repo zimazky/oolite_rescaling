@@ -126,6 +126,8 @@ static const double kMesosphere = 10.0 * ATMOSPHERE_DEPTH;	// atmosphere effect 
 	// В оригинальной игре 1 км = 10 м
 	// Здесь 1 км = PLANET_SCALE_FACTOR м
 	collision_radius = radius_km * PLANET_SCALE_FACTOR;	
+	// Инициализируем параметр высоты атмосферы для видимости в шейдере
+	_atmDepth = ATMOSPHERE_DEPTH;
 
 	OOTechLevelID techLevel = [dict oo_intForKey:KEY_TECHLEVEL defaultValue:[planetInfo oo_intForKey:KEY_TECHLEVEL]];
 	
@@ -903,6 +905,11 @@ static OOColor *ColorWithHSBColor(Vector c)
 	_airDensity = OOClamp_0_1_f(newDensity);
 }
 
+// visible to shader bindings
+- (float) atmDepth
+{
+	return _atmDepth;
+}
 
 - (void) setTerminatorThresholdVector:(Vector) newTerminatorThresholdVector
 {

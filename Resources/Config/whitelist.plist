@@ -370,6 +370,7 @@
 		"illuminationColorAsVector",
 		"airColorMixRatio",
 		"airDensity",
+		"atmDepth",
 		"terminatorThresholdVector",
 		
 		// Renamed, previously player-only properties for 1.74

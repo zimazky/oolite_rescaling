@@ -48,6 +48,7 @@ MA 02110-1301, USA.
 	OOColor				*_illuminationColor;
 	float				_airColorMixRatio;
 	float				_airDensity;
+	float				_atmDepth;
 	double				_mesopause2;
 	
 	Vector				_rotationAxis;
@@ -103,8 +104,11 @@ MA 02110-1301, USA.
 - (void) setIlluminationColor:(OOColor *) newColor;
 - (float) airColorMixRatio; // visible to shader bindings
 - (void) setAirColorMixRatio:(float) newRatio;
-- (float) airDensity; // visible to shafer bindings
+- (float) airDensity; // visible to shader bindings
 - (void) setAirDensity: (float) newDensity;
+
+// Параметр высоты атмосферы для шейдера
+- (float) atmDepth; // visible to shader bindings
 
 - (void) setTerminatorThresholdVector:(Vector) newTerminatorThresholdVector;
 - (Vector) terminatorThresholdVector; // visible to shader bindings
